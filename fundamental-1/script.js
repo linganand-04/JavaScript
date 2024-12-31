@@ -241,7 +241,6 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 */
 
-
 // *************************************
 // CODING CHALLENGE - 1
 // *************************************
@@ -407,9 +406,104 @@ points. Otherwise, no team wins the trophy
 
 Test data:
 § Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+
 § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 */
 
+// const scoreDolphins = ((96+108+89)/3);
+// const scoreKoalas = ((88+91+110)/3);
+
+// console.log(scoreDolphins, scoreKoalas);
+
+// if(scoreDolphins>scoreKoalas){
+//   console.log("Dolphins won the Trophy 😎");
+// }
+// else if(scoreKoalas>scoreDolphins){
+//   console.log("Koalas won the Trophy 😎");
+// }
+// else if(scoreKoalas === scoreDolphins){
+//   console.log("Both are won the Trophy 🏳");
+// }
+// else{
+//   console.log("No one won the Trophy!");
+// }
+
+// Bonus 1 //
+
+// const scoreDolphins = ((97+112+101)/3);
+// const scoreKoalas = ((109+95+123)/3);
+
+// const scoreequal = (scoreDolphins===scoreKoalas)
+
+// console.log(scoreDolphins, scoreKoalas);
+
+// if(scoreDolphins>scoreKoalas && scoreDolphins >= 100){
+//   console.log("Dolphins won the Trophy 😎");
+// }
+// else if(scoreKoalas>scoreDolphins && scoreKoalas >=100 ){
+//   console.log("Koalas won the Trophy 😎");
+// }
+// else if(scoreKoalas === scoreDolphins && scoreequal >=100 ){
+//   console.log("Both are won the Trophy 🏳");
+// }
+// else{
+//   console.log("No one won the Trophy!");
+// }
+
+// ******* SWITCH STATEMENTS ******** //
+
+// const day = "sunday";
+
+// switch (day) {
+//   case "monday":
+//     console.log("Thinga kelaimai tirudanai pidithom");
+//     break;
+//   case "tuesday":
+//     console.log("Seevai kelaimai jail ku ponnan");
+//     break;
+//   case "wednesday":
+//     console.log("Pudhan kelaimai pudhi vandhathu");
+//     break;
+//   case "thursday":
+//     console.log("Veelai kelaimai vidudalai aanan");
+//     break;
+//   case "friday":
+//     console.log("Velli kelaimai v2ku ponnan");
+//     break;
+//   case "saturday" :
+//   case "sunday" :
+//     console.log("saputu tu paduthan");
+//     break
+//   default:
+//     console.log("Plz enter valid options");
+//     break;
+// }
+
+//  Now, lets try in switch statements in if, else if and else  //
+
+const day = "sunday";
+
+if(day==="monday"){
+  console.log("Thinga kelaimai tirudanai pidithom") 
+}
+else if(day === "tuesday"){
+  console.log("Seevai kelaimai jail ku ponnan");
+}
+else if(day === "wednesday"){
+  console.log("Pudhan kelaimai pudhi vandhathu")
+}
+else if(day === "thursday"){
+  console.log("Veelai kelaimai vidudalai aanan")
+}
+else if(day === "friday"){
+  console.log("Velli kelaimai v2ku ponnan")
+}
+else if(day === "saturday" || "sunday"){
+  console.log("saputu tu paduthan")
+}
+else{
+  console.log("Plsz..Enter valid options");
+}
