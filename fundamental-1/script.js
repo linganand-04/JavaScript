@@ -43,108 +43,6 @@ console.log(fname + lname); // if you want space between the name see below..
 console.log(fname + " " + lname);
 */
 
-/*
-// Assignment Operator //
-
-let x = 10+5 // 15
-x += 10 // x = x + 10 = 25
-x *= 4 // x = x * 4 = 100
-x ++ ; // x = x+1 = 101
-console.log(x);
-
-x --;  //  x = x-1 = 100
-console.log(x);
-
-x --;  //  x = x-1 = 99
-console.log(x);
-
-*/
-
-// Comparsion operators //
-/*
-console.log(ageLian > ageAm); // ( 20 > 19)
-console.log(ageAm >= 19);
-console.log(ageAm >= 20);
-
-const isfullAge = ageAm >= 19;
-
-console.log(now - 2004 > now - 2005);
-*/
-
-// Operators Procedence
-
-/*
-const now = 2024;
-const ageLian = now - 2004;
-const ageAm = now - 2005;
-
-console.log(now - 2004 > now - 2005);
-
-let x,y;
-
-x = y = 55 - 10 - 15; // 55 - 10 = 45 , 45 - 15 = 30 //  x = y = 30 , x = 30
-
-console.log(x,y);
-
-let a = 20
-let b = 10
-
-const avg = ( a + b ) / 2; // right to left = (a + b) = 20 + 10 = 30 , ( a + b) / 2 = 30/2 = 15...
-
-//  const avg =  a + b  / 2; // left to right = b/2 = 10 /2 = 5 , a + b = 20 + 5 = 25..
-
-console.log(avg);
-*/
-
-// *************************************
-// CODING CHALLENGE - 1
-// *************************************
-
-/*
-Coding Challenge #1
-
-Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula:
-
-BMI = mass / height ** 2 = mass / (height * height)(mass in kg and height in meter).
-
-Your tasks:
- 1. Store Mark's and John's mass and height in variables
- 
- 2. Calculate both their BMIs using the formula (you can even implement both versions)
- 
-3. Create a Boolean variable 'markHigherBMI' containing information about 
-whether Mark has a higher BMI than John.
-
-Test data:
-
- Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
-
- Data 2: Marks weights 95 kg and is 1.88 m tall. John 
- weights 85 kg and is 1.76 m tall.
-
-*/
-
-/*
-// BMI = mass / height ** 2;
-
-let markweg = 78;
-let markhei = 1.69;
-
-let Johnwei = 95;
-let johnhei = 1.88;
-
-let johnbmi = Johnwei / johnhei ** 2;
-let markbmi = markweg / markhei ** 2;
-
-console.log("John = " + johnbmi);
-console.log("Mark = " + markbmi);
-
-let markHigherBMI = johnbmi > markbmi;
-
-console.log(markHigherBMI);
-
-*/
-
 // *************************************
 // STRING AND TEMPLATE LITERALS
 // *************************************
@@ -382,7 +280,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 
 /*
 // ******************************** //
-******* Coding Challenge #3 *******
+// ****** Coding Challenge #3 ***** //
 // ******************************** //
 
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
@@ -484,26 +382,70 @@ Test data:
 
 //  Now, lets try in switch statements in if, else if and else  //
 
-const day = "sunday";
+// const day = "sunday";
 
-if(day==="monday"){
-  console.log("Thinga kelaimai tirudanai pidithom") 
-}
-else if(day === "tuesday"){
-  console.log("Seevai kelaimai jail ku ponnan");
-}
-else if(day === "wednesday"){
-  console.log("Pudhan kelaimai pudhi vandhathu")
-}
-else if(day === "thursday"){
-  console.log("Veelai kelaimai vidudalai aanan")
-}
-else if(day === "friday"){
-  console.log("Velli kelaimai v2ku ponnan")
-}
-else if(day === "saturday" || "sunday"){
-  console.log("saputu tu paduthan")
-}
-else{
-  console.log("Plsz..Enter valid options");
-}
+// if(day==="monday"){
+//   console.log("Thinga kelaimai tirudanai pidithom") 
+// }
+// else if(day === "tuesday"){
+//   console.log("Seevai kelaimai jail ku ponnan");
+// }
+// else if(day === "wednesday"){
+//   console.log("Pudhan kelaimai pudhi vandhathu")
+// }
+// else if(day === "thursday"){
+//   console.log("Veelai kelaimai vidudalai aanan")
+// }
+// else if(day === "friday"){
+//   console.log("Velli kelaimai v2ku ponnan")
+// }
+// else if(day === "saturday" || "sunday"){
+//   console.log("saputu tu paduthan")
+// }
+// else{
+//   console.log("Plsz..Enter valid options");
+// }
+
+// ************************************ //
+// ******* CODING CHALLENGE - 4 ******* //
+// ************************************ //
+/*
+
+Steven wants to build a very simple tip calculator for whenever he goes eating in a 
+restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 
+300. If the value is different, the tip is 20%. 
+
+Your tasks: 
+
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for 
+this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can 
+start with an if/else statement, and then try to convert it to a ternary 
+operator!) 
+
+2. Print a string to the console containing the bill value, the tip, and the final value 
+(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 
+316.25” 
+
+Test data: 
+
+§ Data 1: Test for bill values 275, 40 and 430 
+
+Hints: 
+
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2 
+§ Value X is between 50 and 300, if it's >= 50 && <= 300 😉 
+ 
+GOOD LUCK 😀 
+
+*/
+
+let bill = 40;
+
+const tip = bill<=300 && bill>=50 ? bill*0.15 : bill*0.2
+
+console.log(`The bill was $${bill}, the tip was $${tip}, and the total value $${bill+tip}`);
+
+
+
+
+
