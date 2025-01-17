@@ -96,7 +96,7 @@ console.log(juicemaker(2,3));
 */
 
 // 007 - REVIEWING FUNCTION //
-
+/*
 const calcage =  function(birthYear){
   return 2025 - birthYear;
 }
@@ -115,31 +115,71 @@ const Retirement = function(dob, firstname){
 
 console.log(Retirement());
 
-/*
+// *** END *** 007 - REVIEWING FUNCTION //
+*/
 
+/*
 Coding Challenge #4
 
-Steven wants to build a very simple tip calculator for whenever he goes eating in a 
-restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 
-300. If the value is different, the tip is 20%.
+Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+A team ONLY wins if it has at least DOUBLE the average score of the other team. Otherwise, no team wins!
 
-Your tasks:
-1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for 
-this. It's not allowed to use an if/else statement � (If it's easier for you, you can 
-start with an if/else statement, and then try to convert it to a ternary 
-operator!)
+1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
 
-2. Print a string to the console containing the bill value, the tip, and the final value 
-(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 
-316.25”
+2. Use the function to calculate the average for both teams
 
-Test data:
-1. Data 1: Test for bill values 275, 40 and 430
+3. Create a function 'checkWinner' that takes the average score of each team as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)".
 
-Hints:
-2. To calculate 20% of a value, simply multiply it by 20/100 = 0.2
-1. Value X is between 50 and 300, if it's >= 50 && <= 300 
+4. Use the 'checkWinner' function to determine the winner for both DATA 1 and DATA 2.
+
+5. Ignore draws this time.
+
+TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+HINT: To calculate average of 3 values, add them all together and divide by 3
+HINT: To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
+
 */
+
+// const DolphinAvg = (44+23+71)/3;
+// const KoalasAvg = (65+54+49)/3
+
+const calcAverage = (a,b,c) => (a+b+c)/3
+console.log(calcAverage(10,10,10));
+
+// TEST 1!
+
+const DolphinsScore = calcAverage(44,23,71);
+const KoalasScore = calcAverage(65,54,49);
+console.log(DolphinsScore,KoalasScore);
+
+function checkWinner (avgDolhins,avgKoalas){
+  avgDolhins = DolphinsScore;
+  avgKoalas = KoalasScore;
+  if (avgDolhins> avgKoalas) {
+    console.log(`Dophins win (${DolphinsScore} vs. ${KoalasScore})`);
+  }
+  if(avgKoalas > avgDolhins) {
+    console.log(`Koalas win (${DolphinsScore} vs. ${KoalasScore})`);
+  }
+  else{
+    console.log("No is win");
+  }
+}
+
+checkWinner(DolphinsScore,KoalasScore)
+
+
+
+
+
+
+
+
+
+
 
 
 
