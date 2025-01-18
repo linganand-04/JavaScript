@@ -151,17 +151,17 @@ console.log(calcAverage(10,10,10));
 
 // TEST 1!
 
-const DolphinsScore = calcAverage(44,23,71);
-const KoalasScore = calcAverage(65,54,49);
+let DolphinsScore = calcAverage(44,23,71);
+let KoalasScore = calcAverage(65,54,49);
 console.log(DolphinsScore,KoalasScore);
 
 function checkWinner (avgDolhins,avgKoalas){
   avgDolhins = DolphinsScore;
   avgKoalas = KoalasScore;
-  if (avgDolhins> avgKoalas) {
+  if (avgDolhins >=  2 * avgKoalas) {
     console.log(`Dophins win (${DolphinsScore} vs. ${KoalasScore})`);
   }
-  if(avgKoalas > avgDolhins) {
+  else if(avgKoalas >= 2 * avgDolhins) {
     console.log(`Koalas win (${DolphinsScore} vs. ${KoalasScore})`);
   }
   else{
@@ -170,6 +170,16 @@ function checkWinner (avgDolhins,avgKoalas){
 }
 
 checkWinner(DolphinsScore,KoalasScore)
+
+// TEST 2
+
+DolphinsScore = calcAverage(85,54,41);
+KoalasScore = calcAverage(23,34,27);
+console.log(DolphinsScore,KoalasScore);
+
+checkWinner(DolphinsScore,KoalasScore)
+
+
 
 
 
