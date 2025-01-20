@@ -308,6 +308,7 @@ Hint: Remember that an array needs a value in each position and that value can a
 //   return bill => 50 && bill <= 300 ? bill * 0.15 : bill * 0.2 ;
 // }
 
+/*
 const calcTip = bill => 50 && bill <= 300 ? bill*0.15 : bill*0.2 
 
 const bills = [125,555,44]
@@ -322,4 +323,97 @@ console.log(bills,tips);
 const total = [bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]]
 
 console.log(`Total = ${total}`);
+*/
+
+// 012 - INTRODUCTION TO OBJEECTS...
+
+const lian = ["linga", "anand", 2025-2004,"webdeveloper", ["anand","lian","saran"]];
+
+console.log(lian[4][2]);
+
+lian[5] = "li"
+
+// const lian1 = {
+//   firstname:'linga',
+//   lastname:'anand',
+//   age:2025-2004,
+//   desgination:'Webdeveloper',
+//   friends:['anand','lian','saran']
+// }
+// console.log(lian1.friends[0]);
+
+
+// 013 - DOT VS. BRACKET NOTATIONS...
+
+const lian1 = {
+  firstname:'linga',
+  lastname:'anand',
+  age:2025-2004,
+  desgination:'Webdeveloper',
+  friends:['Anand','Srikanth','Rizwan']
+}
+// TEMP 
+/*
+console.log(lian)
+
+console.log(lian1)
+
+const Namekey = "name";
+
+console.log(lian1['first'+Namekey]);
+console.log(lian1['last'+Namekey]);
+
+lian1.location = "ponneri"
+console.log(lian1);
+
+
+ const screen =  prompt("Choose anyone from firstname, lastname, age, designation, friends")
+
+ if (lian1[screen]) {
+  console.log(lian1[screen]);
+ }else{
+  console.log("Invalid Options..Choose anyone from firstname, lastname, age, designation, friends");
+ }
+ console.log(screen);
+
+ // If you add like this to object.. Use both options..
+
+ lian1.github = "linganand-04"
+ lian1['instagram'] = "linganand_04"
+ console.log(lian1);
+ 
+ // If you add like this to array.. must declare index of array..
+   
+ lian[-1]= "instagram" // End of the array..
+ console.log(lian);
+
+// Chanllenge 
+
+// Lian has 4 friends and his close friends is Anand
+
+console.log(lian1.friends);
+
+const closefrnd = lian1.friends.includes("Anand")
+
+if (closefrnd) {
+  console.log("Anand is close frnd to lian");
+}else{
+  console.log("Check Properly...");
+}
+console.log(closefrnd);
+
+// Another opions...
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+*/
+
+
+ 
+ 
+
+
+
+
+
+
 
