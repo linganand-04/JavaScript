@@ -326,25 +326,25 @@ console.log(`Total = ${total}`);
 */
 
 // 012 - INTRODUCTION TO OBJEECTS...
-
+/*
 const lian = ["linga", "anand", 2025-2004,"webdeveloper", ["anand","lian","saran"]];
 
 console.log(lian[4][2]);
 
 lian[5] = "li"
 
-// const lian1 = {
-//   firstname:'linga',
-//   lastname:'anand',
-//   age:2025-2004,
-//   desgination:'Webdeveloper',
-//   friends:['anand','lian','saran']
-// }
-// console.log(lian1.friends[0]);
+const lian1 = {
+  firstname:'linga',
+  lastname:'anand',
+  age:2025-2004,
+  desgination:'Webdeveloper',
+  friends:['anand','lian','saran']
+}
+console.log(lian1.friends[0]);
 
-
+*/
 // 013 - DOT VS. BRACKET NOTATIONS...
-
+/*
 const lian1 = {
   firstname:'linga',
   lastname:'anand',
@@ -352,8 +352,7 @@ const lian1 = {
   desgination:'Webdeveloper',
   friends:['Anand','Srikanth','Rizwan']
 }
-// TEMP 
-/*
+
 console.log(lian)
 
 console.log(lian1)
@@ -406,6 +405,53 @@ console.log(closefrnd);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 
 */
+
+// 014 - OBJECTS METHODS
+
+/*
+const lian1 = {
+  firstname:'linga',
+  lastname:'anand',
+  birthyear:2004,
+  desgination:'Webdevelopment',
+  friends:['anand','lian','saran'],
+  hasDriverLicense: true,
+
+  // calcAge : function(birthYear){
+  //   return 2025 - this.birthyear
+  // }
+  
+  // calcAge : function(){
+    //   console.log(this);
+    //   return 2025 - this.birthyear;
+    // }
+
+    calcAge : function(){
+      this.age = 2025 - this.birthyear;
+      return this.age;
+    },
+    getsummary: function(){
+      return `${lian1.firstname} is a ${lian1.calcAge(this.age)}-years old ${lian1.desgination}, and he has ${lian1.hasDriverLicense ? 'a' : 'no'} driver's license`
+    }
+  }
+  // console.log(lian1.calcAge(2004)); // 1st Function works..
+
+  // console.log(lian1.calcAge(this.age));
+
+  //Challenge 
+
+  // "Lian is a 21-years old Webdeveloper, and he has a/no  driver's license"
+
+// OPTION 2
+// console.log(`${lian1.firstname} is a ${lian1.calcAge(this.age)}-years old ${lian1.desgination}, and he has ${lian1.hasDriverLicense ? 'a' : 'no'} driver's license`);
+  
+console.log(lian1.getsummary());
+
+*/
+
+  
+  
+
 
 
  
