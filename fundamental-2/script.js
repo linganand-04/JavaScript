@@ -406,7 +406,6 @@ console.log(closefrnd);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 */
 
-
 // 014 - OBJECTS METHODS
 
 /*
@@ -527,11 +526,75 @@ if(john.BMI>mark.BMI){
 
 */
 
+// 016 - ITERATION FOR THE LOOP
+/*
+// For loops keep running while CONDITION is TRUE
+for(let int=1; int<=10; int++ ){
+  console.log(`Current Number is (${int}) next number is ${int+1}`);
+}
 
+// Two Tables in JavaScript..
+for(let int=1; int<=10; int++ ){
+  console.log(`2x${int}=${int*2}`);
+}
+*/
 
+// 017 - LOOPING ARRAY, BREAKING AND COUNTINUING 
+
+const lian = [
+  'linga',
+  'anand',
+  2025-2004,
+  'Webdeveloper',
+  ['Anand','Srikanth','Rizwan'],
+  true
+]
+
+const type = [];
+
+for (let i = 0; i <= lian.length-1; i++) {
+  // Reading from lian array
+  console.log(lian[i], typeof lian[i]);
+
+  // Filling types array
+  // types[i] = typesof lian[i];
+  type.push(typeof lian[i]);
+}
+
+console.log(type);
+
+const year = [2004,2005,2022,2010]
+const age = [];
+
+for(let i = 0; i<year.length; i++){
+  age.push(2025-year[i])
+}
+
+console.log(age);
+
+// Continue and break
+
+console.log('--- ONLY STRINGS ---');
+for (let i = 0; i <= lian.length; i++) {
+  if(typeof lian[i] !== "string" ) continue
+  console.log(lian[i], typeof lian[i]);
+}
  
- 
+console.log('--- BREAK WITH NUMBERS ---');
+for (let i = 0; i <= lian.length; i++) {
+  if(typeof lian[i] === "number" ) break
+  console.log(lian[i], typeof lian[i]);
+}
 
+
+
+// COLOURFUL OUTPUT IN DEVTOOLS - ITS WORKS ❤ 
+
+// console.log(
+//   '%c Demo status : %c loaded ',
+//   `background: #ddd; color: #000; padding: 4px; border-radius: 2px`,
+//   `background: #6f6; color: #000; padding: 4px; border-radius: 2px; margin-left: 1ch`
+// );
 
 
 
