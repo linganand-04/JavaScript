@@ -333,18 +333,17 @@ console.log(lian[4][2]);
 
 lian[5] = "li"
 
-// const lian1 = {
-//   firstname:'linga',
-//   lastname:'anand',
-//   age:2025-2004,
-//   desgination:'Webdeveloper',
-//   friends:['anand','lian','saran']
-// }
-// console.log(lian1.friends[0]);
+const lian1 = {
+  firstname:'linga',
+  lastname:'anand',
+  age:2025-2004,
+  desgination:'Webdeveloper',
+  friends:['anand','lian','saran']
+}
+console.log(lian1.friends[0]);
 
-
+*/
 // 013 - DOT VS. BRACKET NOTATIONS...
-/*
 
 const lian1 = {
   firstname:'linga',
@@ -353,6 +352,8 @@ const lian1 = {
   desgination:'Webdeveloper',
   friends:['Anand','Srikanth','Rizwan']
 }
+// TEMP 
+/*
 console.log(lian)
 
 console.log(lian1)
@@ -405,88 +406,6 @@ console.log(closefrnd);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 
 */
-
-// 014 - Chanllenge - 3
-
-/*
-
-Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
-
-Your tasks: 
-
-1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
-
-2. Create a 'calcBMI' method on each object to calculate the BMI(the same method on both objects). Store the BMI value to a property, and also return it from the method 
-
-3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!" 
-
-Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
-
-*/
-
-/*
-// Solution - 1
-// From Own Idea Code 
-const mark = {
-  fullname:"Mark Miller",
-  mass:78,
-  height:1.69
-}
-
-const john = {
-  fullname:"John Smith",
-  mass:92,
-  height:1.95
-}
-
-const calcBMI = (mass,height)=>mass/height**2;
-
-console.log(`${mark.fullname}'s BMI (${calcBMI(mark.mass,mark.height).toFixed(2)}) is higher than ${john.fullname}'s (${calcBMI(john.mass,john.height).toFixed(2)})!`);
-*/
-
-// Solution - 2
-// From Video Solution
-
-/*
-const mark = {
-  fullname:"Mark Miller",
-  mass:78,
-  height:1.69,
-  CalcBMI:function() {
-    this.BMI = this.mass / this.height**2;
-    return this.BMI
-  }
-}
-
-const john = {
-  fullname:"John Smith",
-  mass:92,
-  height:1.95,
-  CalcBMI:function() {
-    this.BMI = this.mass / this.height**2;
-    return this.BMI
-  }
-}
-
-mark.CalcBMI()
-john.CalcBMI()
-
-console.log(mark.BMI,john.BMI);
-
-// John's BMI (28.3) is higher than Mark's (23.9)!
-
-if(john.BMI>mark.BMI){
-  console.log(`${john.fullname}'s BMI (${john.BMI}) is higher than ${mark.fullname}'s (${mark.BMI})`);
-}else{
-  console.log(`${mark.fullname}'s BMI (${mark.BMI}) is higher than ${john.fullname}'s (${john.BMI})`);
-}
-
-*/
-
-
-
-
-
 
 
  
