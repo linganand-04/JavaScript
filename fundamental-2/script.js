@@ -540,7 +540,7 @@ for(let int=1; int<=10; int++ ){
 */
 
 // 017 - LOOPING ARRAY, BREAKING AND COUNTINUING 
-
+/*
 const lian = [
   'linga',
   'anand',
@@ -587,7 +587,6 @@ for (let i = 0; i <= lian.length; i++) {
 }
 
 
-
 // COLOURFUL OUTPUT IN DEVTOOLS - ITS WORKS ❤ 
 
 // console.log(
@@ -596,8 +595,42 @@ for (let i = 0; i <= lian.length; i++) {
 //   `background: #6f6; color: #000; padding: 4px; border-radius: 2px; margin-left: 1ch`
 // );
 
+*/
 
 
+// 018 - LOOPING BACKWARDS AND LOOP IN LOOP
 
+
+// THIS IS HARD CODE.. Don't do like this..❌
+
+// for(let int=10; int>=0; int-- ){
+//   console.log(`Current Number is (${int}) next number is ${int-1}`);
+// }
+
+// THIS IS DYNAMIC CODE... Use this one.. FOR ARRAY... ✔
+
+const lian = [
+  'linga',
+  'anand',
+  2025-2004,
+  'Webdeveloper',
+  ['Anand','Srikanth','Rizwan'],
+  true
+]
+
+for(let i = lian.length-1; i>=0 ; i--  ){
+  console.log(lian[i]);
+}
+
+// LOOPS IN LOOP..
+
+for( let int = 1 ; int<=3; int++){
+  console.log(`Exercise ${int}`);
+
+  for( let j = 1; j <=5 ; j++){
+    console.log(`Exercise ${int} for Say Hi..${j}`);
+    
+  }
+}
 
 
