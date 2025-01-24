@@ -539,7 +539,7 @@ for(let int=1; int<=10; int++ ){
 }
 */
 
-// 017 - LOOPING ARRAY, BREAKING AND COUNTINUING 
+// 017 - LOOPING ARRAY, BREAKING AND COUNTINUING
 /*
 const lian = [
   'linga',
@@ -597,7 +597,6 @@ for (let i = 0; i <= lian.length; i++) {
 
 */
 
-
 // 018 - LOOPING BACKWARDS AND LOOP IN LOOP
 
 /*
@@ -634,7 +633,7 @@ for( let int = 1 ; int<=3; int++){
 }
 */
 
-// 019 - THE WHILE LOOP 
+// 019 - THE WHILE LOOP
 
 /*
 // FOR LOOP
@@ -662,7 +661,7 @@ while (dice===6) {
 }
 */
 
-// 020 - Coding Challenge #4 
+// 020 - Coding Challenge #4
 
 /*
 Let's improve Steven's tip calculator even more, this time using loops! 
@@ -686,5 +685,36 @@ Bonus:
 4.2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements) 
 
 4.3. Call the function with the 'totals' array 
+
+*/
+
+/*
+const calcTip = function (bill) {
+  return bill = 50 && bill <= 300 ? bill * 0.15 : bill * 0.2 ;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+for(let i=0; i < bills.length; i++){
+  const tip = calcTip(bills[i])
+  tips.push(tip)
+  totals.push(tip + bills[i]);
+}
+
+console.log(bills,tips,totals);
+
+const calcAverage = function(arr) {
+  let sum = 0;
+  for (let i = 0 ; i < arr.length; i++){
+    sum = sum + arr[i]
+  }
+  return sum / arr.length 
+}
+
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
 
 */
