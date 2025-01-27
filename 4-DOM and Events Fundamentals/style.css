@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Lobster&display=swap');
 
 * {
   margin: 0;
@@ -12,10 +12,10 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Lobster', serif;
   color: #eee;
   background-color: #222;
-  background-color: #60b347;
+  /* background-color: #60b347; */
 }
 
 /* LAYOUT */
@@ -41,6 +41,7 @@ main {
 }
 
 .right {
+  padding-left: 80px;
   width: 52rem;
   font-size: 2rem;
 }
@@ -110,10 +111,12 @@ h1 {
 }
 
 .message {
+  font-size: 24px;
   margin-bottom: 8rem;
   height: 3rem;
 }
 
 .label-score {
+  font-size: 24px;
   margin-bottom: 2rem;
 }
