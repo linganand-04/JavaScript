@@ -22,13 +22,25 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess);
 
+  // if there is no input
   if (!guess) {
     document.querySelector('.message').textContent = '🙄 No Number';
-  } else if (guessNumber === guess) {
+  }
+
+  // when player wins
+  else if (guessNumber === guess) {
     document.querySelector('.message').textContent = '💥 Correct Number..';
-  } else if (guessNumber < guess) {
+
+    document.querySelector('body').style.backgroundColor = 'green';
+  }
+
+  // when guess is too high
+  else if (guessNumber < guess) {
     document.querySelector('.message').textContent = 'Too High..📈';
-  } else if (guessNumber > guess) {
+  }
+
+  // when guess is too low
+  else if (guessNumber > guess) {
     document.querySelector('.message').textContent = 'Too Low..📉';
   }
 });
