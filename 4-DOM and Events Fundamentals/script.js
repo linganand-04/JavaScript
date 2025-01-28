@@ -15,8 +15,25 @@ document.querySelector('.guess').value;
 console.log((document.querySelector('.guess').value = 24));
 */
 
-const guessNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = guessNumber;
+let guessNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
+// document.querySelector('.number').textContent = guessNumber;
+
+// Reset the GAME
+document.querySelector('.again').addEventListener('click', function () {
+  score = 20
+  // fixx the bug in this game 
+  /*
+  document.querySelector('.number').value = guessNumber;
+  */
+  document.querySelector('.score').textContent = '20';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.number').textContent = '?';
+  const guess = Number(document.querySelector('.guess').value = '' );
+});
+// --------------
+
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -27,20 +44,49 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = '🙄 No Number';
   }
 
+
   // when player wins
   else if (guessNumber === guess) {
     document.querySelector('.message').textContent = '💥 Correct Number..';
-
-    document.querySelector('body').style.backgroundColor = 'green';
+    document.querySelector('.number').textContent = guessNumber;
+    document.querySelector('body').style.backgroundColor = '#163825';
   }
 
   // when guess is too high
   else if (guessNumber < guess) {
-    document.querySelector('.message').textContent = 'Too High..📈';
+    if (score > 1) {
+      document.querySelector('.message').textContent = 'Too High..📈';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = 'You lost the Game..☠';
+      document.querySelector('.number').textContent = guessNumber;
+      document.querySelector('body').style.backgroundColor = '#7A2020';
+    }
   }
 
   // when guess is too low
   else if (guessNumber > guess) {
-    document.querySelector('.message').textContent = 'Too Low..📉';
+    if (score > 1) {
+      document.querySelector('.message').textContent = 'Too Low..📉';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = 'You lost the Game..☠';
+      document.querySelector('.number').textContent = guessNumber;
+      document.querySelector('body').style.backgroundColor = '#7A2020';
+    }
   }
+
+  // fixx the bug in this game 
+
+  /*
+  else if (guess<20){
+    document.querySelector('.message').textContent = 'Between 1 and 20 ⚠';
+  }
+
+  else if (guess>0){
+    document.querySelector('.message').textContent = 'Between 1 and 20 ⚠';
+  }
+  */
 });
