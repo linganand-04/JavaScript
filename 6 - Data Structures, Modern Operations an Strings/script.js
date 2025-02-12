@@ -12,6 +12,11 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+  order : function (startIndex,mainIndex) {
+    return [this.starterMenu[startIndex],
+    this.mainMenu[mainIndex]] 
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -27,3 +32,52 @@ const restaurant = {
     },
   },
 };
+
+const arr = [2,3,4]
+
+const a = arr[0]
+const b = arr[1]
+const c = arr[2]
+
+console.log(a, b,c);
+
+const [a1,b2,c3] = arr
+
+console.log(a1,b2,c3);
+
+// Getting first and second element
+const [fir,sec] = restaurant.categories
+console.log(fir,sec);
+
+// Getting first and third element
+let [main, ,secondary] = restaurant.categories
+console.log(main,secondary);
+
+// *****  Invert the Elements  *****
+// const temp = main
+// main = secondary
+// secondary  = temp
+// console.log([main,secondary]) 
+
+
+[main,secondary] = [secondary,main]
+
+console.log([main,secondary]);
+
+// Return the two values using function...
+// console.log(restaurant.order(2,0));
+
+const [starter, mainCourse] = restaurant.order(2,2);
+console.log(starter,mainCourse);
+
+// Nested Destructing Array 
+
+const nested = [5,6,[7,8]];
+// const [i, , j] = nested
+const [i, ,[j,k]] = nested
+console.log(i,j,k);
+
+// Default
+
+const [p = 1, q=10, r=1] = [5]
+console.log(p,q,r);
