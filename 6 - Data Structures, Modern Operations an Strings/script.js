@@ -30,8 +30,98 @@ const restaurant = {
       close: 24,
     },
   },
+
+  orderDelivery: function ({ startIndex, mainIndex, time, address }) {
+    console.log(
+      `Order Received! ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time} `
+    );
+  },
+  dish : function(ing1,ing2,ing3){
+    console.log(`Here is Your Delicious Curd Rice with ${ing1}, ${ing2}, ${ing3}`);
+  }
 };
 
+//
+
+////////////////////////
+// 005 Spead Operators (...)
+/*
+
+const arr = [2, 3, 4];
+const badArr = [0, 1, arr];
+const newArr = [0, 1, arr[0], arr[1], arr[2]];
+
+console.log(newArr);
+console.log(badArr);
+
+// Now, we use Spread Operators to Achieve..
+
+const sprArr = [0,1,...arr]
+console.log(`This is Spread Operators.. ${sprArr}`);
+
+const newmenu = [...restaurant.mainMenu,'Burger']
+console.log(newmenu);
+
+// Copy newmenu
+
+const copyNewmenu = [...restaurant.mainMenu]
+console.log(copyNewmenu);
+
+// Join 2 Arrays..
+
+const menu = [...restaurant.starterMenu,'Burger',...restaurant.mainMenu]
+console.log(menu);
+
+// Iterables  : string, array, maps, sets, NOT a Object
+const str = 'Ling'
+console.log(...str); // Don't Use for Strings..Spread Operators..
+
+// We can't use `` in Spread operators.. 
+// console.log(`${...str}anand`); 
+
+// REAL WORLD EXAMPLES..
+const ingredients = [
+// prompt(`Let's Make Curd Rice! Ingredients 1?`),prompt(`Ingredients 2?`),prompt(`Ingredients 3?`)
+]
+
+// Normally We did like this..
+restaurant.dish(ingredients[0],ingredients[1],ingredients[2])
+
+// But, Now we know about Spread Operators...
+restaurant.dish(...ingredients)
+
+// Objects..
+
+const newRestaurant = {foundedIn:1840,...restaurant,founder:'Lian'}
+
+console.log(newRestaurant);
+
+const copyRestaurant = {...restaurant}
+
+console.log(copyRestaurant);
+
+copyRestaurant.name = "Sangi Mangi"
+
+console.log(copyRestaurant.name);
+console.log(restaurant.name);
+
+*/
+
+////////////////////////
+// 004 - Destructing Objects..
+/*
+restaurant.orderDelivery({
+  startIndex : 2,
+  mainIndex : 2,
+  time : `7:00 PM` ,
+  address : `48, Thayuman Street, Ponneri - 601204`,
+})
+*/
+
+////////////////////////
+// 003 - Destructing Arrays..
+
+/*
 const arr = [2, 3, 4];
 
 const a = arr[0];
@@ -99,3 +189,4 @@ const {
 } = openingHours;
 
 console.log(open, close);
+*/
