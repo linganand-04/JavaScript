@@ -17,11 +17,10 @@ const newBtn = document.querySelector('.btn--new');
 // Hold the score => Current Score to Main Score
 const holdBtn = document.querySelector('.btn--hold');
 
-let score, activePlayer, currScore , playing;
+let score, activePlayer, currScore, playing;
 
 function init() {
-  
-  score = [0, 0]; 
+  score = [0, 0];
   activePlayer = 0;
   currScore = 0;
   playing = true;
@@ -36,7 +35,7 @@ function init() {
   SecPlayer1.classList.remove('player--winner');
   SecPlayer2.classList.remove('player--active');
   SecPlayer2.classList.remove('player--winner');
-};
+}
 
 init();
 
@@ -46,7 +45,6 @@ function switchplayer() {
   SecPlayer1.classList.toggle('player--active');
   SecPlayer2.classList.toggle('player--active');
 }
-
 
 rollBtn.addEventListener('click', function () {
   let diceImg = Math.floor(Math.random() * 6) + 1;
@@ -76,7 +74,7 @@ holdBtn.addEventListener('click', function () {
     // 1. Add current score to Main Score => Active Player score..
     score[activePlayer] += currScore;
     // 0[0] = 0 + currscore
-    // score[1] =score[1] += currscore
+    // score[1] =score[1] + currscore
 
     document.getElementById(`score--${activePlayer}`).textContent =
       score[activePlayer];
@@ -101,6 +99,6 @@ holdBtn.addEventListener('click', function () {
   }
 });
 
-newBtn.addEventListener('click', function(){
-  init()
+newBtn.addEventListener('click', function () {
+  init();
 });
