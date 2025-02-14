@@ -36,12 +36,41 @@ const restaurant = {
       `Order Received! ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time} `
     );
   },
-  dish : function(ing1,ing2,ing3){
-    console.log(`Here is Your Delicious Curd Rice with ${ing1}, ${ing2}, ${ing3}`);
-  }
+  dish: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is Your Delicious Curd Rice with ${ing1}, ${ing2}, ${ing3}`
+    );
+  },
 };
 
-//
+////////////////////////
+// 006 - Patterns and Parameters
+
+// SPREAD, because on RIGHT SIDE of =
+
+const arr = [1, 2, ...[4, 5]];
+console.log(arr);
+
+// REST, because on LEFT SIDE of =
+
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others); // a =1 , b=2, others = [3,4,5]
+
+const [Pizza, , Risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(Pizza, Risotto, otherFood);
+// ***** HOW ITS WORK ***** //
+
+// OUTPUT : Pizza Risotto (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
+// Pizza, , Risotto, = Pizza Risotto // EXPLAIN.. Skip the middle value...
+
+// otherFood = ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
+// ********* END ********** //
 
 ////////////////////////
 // 005 Spead Operators (...)
@@ -84,10 +113,10 @@ const ingredients = [
 // prompt(`Let's Make Curd Rice! Ingredients 1?`),prompt(`Ingredients 2?`),prompt(`Ingredients 3?`)
 ]
 
-// Normally We did like this..
+////////////// Normally We did like this..
 restaurant.dish(ingredients[0],ingredients[1],ingredients[2])
 
-// But, Now we know about Spread Operators...
+////////////// But, Now we know about Spread Operators...
 restaurant.dish(...ingredients)
 
 // Objects..
@@ -189,4 +218,22 @@ const {
 } = openingHours;
 
 console.log(open, close);
+*/
+
+///////////////////////////////////////
+// PALIDROME
+
+/*
+const check = function (pal) {
+  let nor = pal.toLowerCase().split('');
+  let a = nor.join('');
+  let b = nor.reverse().join('');
+
+  if (a === b) {
+    console.log(`${pal} is Palidrome`);
+  } else {
+    console.log(`${pal} is not a Palidrome`);
+  }
+};
+check('Dad');
 */
