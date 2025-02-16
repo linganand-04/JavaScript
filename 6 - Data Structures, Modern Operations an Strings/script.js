@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 // Data needed for a later exercise
 const flights =
@@ -41,10 +41,74 @@ const restaurant = {
       `Here is Your Delicious Curd Rice with ${ing1}, ${ing2}, ${ing3}`
     );
   },
+
+  orderPizza : function(mainIngredients , ...otherIngredients){
+    console.log(mainIngredients, otherIngredients)
+      // .toString().replaceAll(',',''));
+  }
 };
 
 ////////////////////////
+// 009 -  Logical Assignment Operators
+
+
+
+////////////////////////
+// 008 - Nullish coalesing Operator
+/*
+const guestsExp1 = restaurant.guests || 10; // check any truthy value..if it is exist return the data
+console.log(guestsExp1);
+
+const guestsExp2 = restaurant.guests && 10;
+console.log(guestsExp2); // check both values.. if both are tuthy values.. return the data.. else falsey return the falsey value..
+
+// Nullish : null and undefined ( NOT 0 or '' )
+const guestsCorrect = restaurant.guests ?? 10;
+console.log(guestsCorrect);
+*/
+
+
+
+////////////////////////
+// 007 - Short Circuiting ( && and )
+/*
+// use ANY data type, return ANY data type, Short circuiting
+
+console.log('----- OR -----');
+
+console.log(3 || 'Lian');
+console.log(true || 0);
+console.log( '' || 'Lian');
+console.log(undefined || null); 
+console.log( '' || undefined);
+
+// restaurant.guests = 23 // When give u value = 0 return the another value... because #ZERO and #0 are not a Truthy values.. 
+
+// const guests1 = restaurant.guests ? restaurant.guests : 10
+// console.log(guests1);
+
+// const guests2 = restaurant.guests || 10
+// console.log(guests2);
+
+console.log('----- AND -----');
+
+console.log(0 && 'Lian');
+console.log(3 && 'Lian');
+console.log(true && 0);
+
+console.log('hello' && 23 && null && 'jonas');
+
+if(restaurant.orderPizza){
+  restaurant.orderPizza('Mushroon','spinch','lausse')
+}
+
+restaurant.orderPizza && restaurant.orderPizza('Mushroon','spinch','lausse')
+*/
+
+////////////////////////
 // 006 - Patterns and Parameters
+/*
+// 1) Destructuring
 
 // SPREAD, because on RIGHT SIDE of =
 
@@ -71,6 +135,26 @@ console.log(Pizza, Risotto, otherFood);
 // otherFood = ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
 
 // ********* END ********** //
+
+// 2) Functions..
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++)sum =  sum + numbers[i]
+    console.log(sum);
+  console.log(numbers);
+};
+
+add(2, 3);
+add(2, 3, 4, 5);
+add(2, 3, 4, 5, 6, 7);
+
+const x =[23,5,6]
+
+add(...x)
+
+restaurant.orderPizza('mushroom', 'maida','vegetables')
+*/
 
 ////////////////////////
 // 005 Spead Operators (...)
