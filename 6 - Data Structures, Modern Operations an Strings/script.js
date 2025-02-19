@@ -1,4 +1,4 @@
- 'use strict';
+'use strict';
 
 // Data needed for a later exercise
 const flights =
@@ -42,12 +42,11 @@ const restaurant = {
     );
   },
 
-  orderPizza : function(mainIngredients , ...otherIngredients){
-    console.log(mainIngredients, otherIngredients)
-      // .toString().replaceAll(',',''));
-  }
+  orderPizza: function (mainIngredients, ...otherIngredients) {
+    console.log(mainIngredients, otherIngredients);
+    // .toString().replaceAll(',',''));
+  },
 };
-
 
 const game = {
   team1: 'Bayern Munich',
@@ -117,6 +116,26 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
+// 1
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+// 2
+const [gk, ...fieldPlayers] = players1
+console.log(gk,fieldPlayers);
+
+// 3
+const allPlayers = [...players1,...players2]
+console.log(allPlayers);
+
+// 4 
+const players1Final = [...players1,'Thiago', 'Coutinho', 'Perisic']
+console.log(players1Final);
+
+// 5
+const {odds:{team1,x: draw,team2} } = game
+console.log(team1,draw,team2);
+
 
 
 
@@ -167,8 +186,6 @@ console.log(guestsExp2); // check both values.. if both are tuthy values.. retur
 const guestsCorrect = restaurant.guests ?? 10;
 console.log(guestsCorrect);
 */
-
-
 
 ////////////////////////
 // 007 - Short Circuiting ( && and )
